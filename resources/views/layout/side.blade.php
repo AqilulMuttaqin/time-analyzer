@@ -19,12 +19,6 @@
                 </a>
             </li>
             <li class="nav-item nav-category">Pages</li>
-            <li class="nav-item {{ $title === 'Report Monthly' ? 'active' : '' }}">
-                <a href="{{ route('report-monthly') }}" class="nav-link">
-                    <i class="link-icon" data-feather="airplay"></i>
-                    <span class="link-title">Report Monthly</span>
-                </a>
-            </li>
             <li class="nav-item {{ $title === 'Downtime' ? 'active' : '' }}">
                 <a href="{{ route('downtime') }}" class="nav-link">
                     <i class="link-icon" data-feather="alert-triangle"></i>
@@ -37,35 +31,56 @@
                     <span class="link-title">Effective</span>
                 </a>
             </li>
-            <li class="nav-item {{ $title === 'Target Downtime' ? 'active' : '' }}">
-                <a href="{{ route('target-downtime') }}" class="nav-link">
+            <li class="nav-item">
+                <a href="#analisis" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="analisis">
                     <i class="link-icon" data-feather="activity"></i>
-                    <span class="link-title">Target Downtime</span>
+                    <span class="link-title">Analisis</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
+                <div class="collapse" id="analisis">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="{{ route('report-monthly') }}" class="nav-link {{ $title === 'Report Monthly' ? 'active' : '' }}">Report Monthly</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('target-downtime') }}" class="nav-link {{ $title === 'Target Downtime' ? 'active' : '' }}">Target Downtime</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
-            <li class="nav-item {{ $title === 'Sub Golongan' ? 'active' : '' }}">
-                <a href="{{ route('subgolongan') }}" class="nav-link">
-                    <i class="link-icon" data-feather="git-commit"></i>
-                    <span class="link-title">Sub Golongan</span>
+            <li class="nav-item">
+                <a href="#area" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="area">
+                    <i class="link-icon" data-feather="map-pin"></i>
+                    <span class="link-title">Area</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
+                <div class="collapse" id="area">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="{{ route('golongan') }}" class="nav-link {{ $title === 'Golongan' ? 'active' : '' }}">Golongan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('subgolongan') }}" class="nav-link {{ $title === 'Sub Golongan' ? 'active' : '' }}">Sub Golongan</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
-            <li class="nav-item {{ $title === 'Golongan' ? 'active' : '' }}">
-                <a href="{{ route('golongan') }}" class="nav-link">
-                    <i class="link-icon" data-feather="git-pull-request"></i>
-                    <span class="link-title">Golongan</span>
+            <li class="nav-item">
+                <a href="#code" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="code">
+                    <i class="link-icon" data-feather="code"></i>
+                    <span class="link-title">Code</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
-            </li>
-            <li class="nav-item {{ $title === 'Section' ? 'active' : '' }}">
-                <a href="{{ route('section') }}" class="nav-link">
-                    <i class="link-icon" data-feather="layers"></i>
-                    <span class="link-title">Section</span>
-                </a>
-            </li>
-            <li class="nav-item {{ $title === 'Downtime Code' ? 'active' : '' }}">
-                <a href="{{ route('downtimecode') }}" class="nav-link">
-                    <i class="link-icon" data-feather="info"></i>
-                    <span class="link-title">Downtime Code</span>
-                </a>
+                <div class="collapse" id="code">
+                    <ul class="nav sub-menu">
+                        <li class="nav-item">
+                            <a href="{{ route('downtimecode') }}" class="nav-link {{ $title === 'Downtime Code' ? 'active' : '' }}">Downtime Code</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('section') }}" class="nav-link {{ $title === 'Section' ? 'active' : '' }}">Section</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
             @if (auth()->user()->role == 'admin')
                 <li class="nav-item {{ $title === 'Users' ? 'active' : '' }}">

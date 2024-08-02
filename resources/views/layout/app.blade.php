@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ asset('assets/fonts/feather-font/css/iconfont.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendors/flag-icon-css/css/flag-icon.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/demo1/style.css') }}">
-    <link rel="shortcut icon" href="{{ asset('assets/images/warningtime.png') }}" />
+    <link rel="shortcut icon" href="{{ asset('assets/images/analyzer-icon.png') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/demo1/bootstrap-toggle.min.css?v=1.0') }}">
     <style>.table td {vertical-align: middle;}</style>
 </head>

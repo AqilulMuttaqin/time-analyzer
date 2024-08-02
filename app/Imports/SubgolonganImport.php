@@ -2,9 +2,7 @@
 
 namespace App\Imports;
 
-use App\Models\Carline;
 use App\Models\Golongan;
-use App\Models\Line;
 use App\Models\Subgolongan;
 use Maatwebsite\Excel\Facades\Excel;
 

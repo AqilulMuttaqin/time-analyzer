@@ -58,7 +58,7 @@
         <div class="col-lg-6 col-xl-6 grid-margin stretch-card">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title mb-0 mt-2 text-center">Breakdown Downtime Per Line</h5>
+                    <h5 class="card-title mb-0 mt-2 text-center">Breakdown Downtime Per Sub Golongan</h5>
                 </div>
                 <div class="card-body">
                     <canvas id="chartBreakdown" height="140"></canvas>
@@ -522,7 +522,7 @@
                             x: {
                                 title: {
                                     display: true,
-                                    text: 'Line',
+                                    text: 'Sub Golongan',
                                     color: colors.bodyColor,
                                     font: {
                                         size: 14,
